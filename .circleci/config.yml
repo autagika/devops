@@ -23,12 +23,12 @@ jobs:
              python3 -m venv venv
              mkdir -p venv/build
              touch venv/build/activate
-             source venv/build/activate
-             pip3 install -r requirements.txt
+             . venv/build/activate
+             pip install -r requirements.txt
       - run:
           name: run tests
           command:  |
-             source venv/build/activate
+             . venv/build/activate
 
              flake8  --exclude=venv*  --statistics
 
