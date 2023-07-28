@@ -24,7 +24,7 @@ jobs:
              mkdir -p venv/build
              touch venv/build/activate
              source venv/build/activate
-             pip install -r requirements.txt
+             pip3 install -r requirements.txt
       - run:
           name: run tests
           command:  |
