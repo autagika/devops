@@ -28,7 +28,7 @@ jobs:
       - run:
           name: run tests
           command:  |
-             . venv/build/activate
+             source venv/build/activate
 
              flake8  --exclude=venv*  --statistics
 
