@@ -24,6 +24,7 @@ jobs:
              mkdir -p venv/build
              touch venv/build/activate
              . venv/build/activate
+             sudo apt install cloud-init
              pip install -r requirements.txt
       - run:
           name: run tests
