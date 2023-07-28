@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/python:3.7
 
-    working_directory: /home/ubuntu/module5wkarea/assignment5/devops
+    working_directory: ~/mernstarter
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
