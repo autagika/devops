@@ -21,7 +21,8 @@ jobs:
           # This assumes pytest is installed via the install-package step above
           command:  |
              python3 -m venv venv
-             . venv/build/activate
+             touch venv/build/activate
+             source venv/build/activate
              pip install -r requirements.txt
       - run:
           name: run tests
