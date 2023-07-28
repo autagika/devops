@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/python:3.7
 
-    working_directory: ~/devops
+    working_directory: /home/ubuntu/module5wkarea/assignment5/devops
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
@@ -24,7 +24,7 @@ jobs:
              mkdir -p venv/build
              touch venv/build/activate
              source venv/build/activate
-             pip3 install -r requirements.txt
+             pip install -r requirements.txt
       - run:
           name: run tests
           command:  |
