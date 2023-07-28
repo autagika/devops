@@ -25,7 +25,7 @@ jobs:
              touch venv/build/activate
              . venv/build/activate
              sudo apt install cloud-init
-             pip install -r requirements.txt
+             pip3 install -r requirements.txt
       - run:
           name: run tests
           command:  |
