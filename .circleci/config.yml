@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   build: 
     docker:
-      - image: circleci/python:3.10
+      - image: circleci/python:3.7
 
     working_directory: ~/mernstarter
     # Checkout the code as the first step. This is a dedicated CircleCI step.
@@ -24,7 +24,7 @@ jobs:
              mkdir -p venv/build
              touch venv/build/activate
              . venv/build/activate
-             sudo apt install cloud-init
+             
              pip3 install -r requirements.txt
       - run:
           name: run tests
