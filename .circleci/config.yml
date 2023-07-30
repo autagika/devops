@@ -11,7 +11,7 @@ jobs:
     working_directory: ~/mernstarter
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # 
-    # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
+    # we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
