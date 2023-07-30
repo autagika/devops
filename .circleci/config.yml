@@ -31,8 +31,8 @@ jobs:
       - run:
           name: Prepare test results directory
           command: |
-            mkdir -p /home/circleci/mernstarter/test_results
-            chmod 777 /home/circleci/mernstarter/test_results
+            mkdir -p /home/circleci/mernstarter/test-results
+            chmod 777 /home/circleci/mernstarter/test-results
 
       - run:
           name: Run tests
@@ -41,11 +41,11 @@ jobs:
 
              flake8  --exclude=venv*  --statistics
 
-             pytest --junitxml=test-results/junit.xml
+             pytest --junitxml=/home/circleci/mernstarter/test-results/junit.xml
 
       - store_test_results:
-          path: test_results
+          path: /home/circleci/mernstarter/test-results
 
       - store_artifacts:
-          path: test_results
+          path: /home/circleci/mernstarter/test-results
 
