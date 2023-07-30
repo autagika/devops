@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   build: 
     docker:
-      - image: circleci/python:3.8
+      - image: circleci/python:3.7
 
     working_directory: ~/mernstarter
     # Checkout the code as the first step. This is a dedicated CircleCI step.
@@ -17,7 +17,7 @@ jobs:
     steps:
       -  checkout
       - run:
-          name: install dependencies
+          name: Install dependencies
           # This assumes pytest is installed via the install-package step above
           command:  |
              python3 -m venv venv
@@ -26,8 +26,16 @@ jobs:
              . venv/build/activate
              
              pip install -r requirements.txt
+
+      # Create the test_results directory and set permissions before running tests
       - run:
-          name: run tests
+          name: Prepare test results directory
+          command: |
+            mkdir -p /home/circleci/mernstarter/test_results
+            chmod 777 /home/circleci/mernstarter/test_results
+
+      - run:
+          name: Run tests
           command:  |
              . venv/build/activate
 
