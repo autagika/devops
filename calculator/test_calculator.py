@@ -16,4 +16,4 @@ class TestCalculator:
         assert 100 == calculator.multiply(10, 10)
 
     def test_multiplication2(self):
-        assert calculator.multiply(3, 5) != 18
+        assert calculator.multiply(3, 5) != 19
