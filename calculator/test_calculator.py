@@ -17,3 +17,6 @@ class TestCalculator:
 
     def test_multiplication2(self):
         assert calculator.multiply(3, 5) != 19
+
+    def test_multiplication2(self):
+        assert calculator.divide(20, 5) == 4
